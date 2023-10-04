@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="title">
+        <b>Stopwatch</b>
+    </div>
+    <div class="container">
+        
+        <div class="dial">
+            <img src="assets\watch_dial.png" alt="dial">
+            <div class="screen">
+                <img src="assets\watch_screen.png" alt="screen">
+                <div class="clock">
+                    <span id="hr">00</span>
+                    <span.colon>:</span.colon>
+                    <span id="min">00</span>
+                    <span.colon>:</span.colon>
+                    <span id="sec">00</span>
+                    <span.colon>:</span.colon>
+                    <span id="msec">00</span>
+        
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="button">
+            <button id="start" onclick="start()">Start</button>
+            <button id="lap" onclick="lap()">Lap</button>
+        </div>
+        
+    </div>
+<script src="script.js"></script>
+    
+</body>
+</html>
