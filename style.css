@@ -24,8 +24,12 @@ body{
     /* display: flex;
     justify-content: center;  */
     position: relative;
+    display: inline-block;
     top: 50%;
     left: 40%;
+    padding: 0%;
+    margin: 0%;
+    width: fit-content;
 }
 .screen{
     /* display: flex;
@@ -53,6 +57,14 @@ body{
     justify-content: space-around;
     cursor: pointer;
 }
+#clear{
+    background-color:rgb(255, 255, 255);
+    width: 8%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
 #lap{
     background-color:rgb(67, 151, 61);
     width: 8%;
@@ -62,4 +74,27 @@ body{
 }
 .button button:hover{
     box-shadow: 1px 1px 20px rgb(61, 60, 60);
+}
+.lapCount{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: white;
+    overflow: auto;
+}
+.sNo{
+    color: white;
+}
+.time{
+    display: inline-block;
+    margin-left: 20vw;
+}
+.lapData{
+    width: 30vw;
+    text-align: center;
+    display: inline-block;
+    padding: .5%;
+    background-color:rgb(67, 151, 61);
+    border-radius: 2rem;
+
 }

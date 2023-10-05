@@ -1,7 +1,10 @@
 var h=0;
+const x = document.getElementById("audio1");
+const img=document.getElementById("screen");
 var m=0;
 var s=0;
 var c=0;
+// const lap=document.getElementById("lapCount");
 var button = document.getElementById("start"),
   count = 0;
 button.onclick = function() {
@@ -11,22 +14,67 @@ button.onclick = function() {
   }
   else{
     stop();
+    document.getElementById("lap").innerHTML="Reset";
   }
+
 }
 var temp=false;
+
+var button1 = document.getElementById("lap");
+button1.onclick = function() {
+  if(temp==true){
+    lap();
+  }
+  else{
+    reset();
+  }
+}
 function start(){
     temp=true;
+    audio();
     document.getElementById("start").innerHTML="Stop";
     stopwatch();
+
        
 }
 function lap(){
+    // const li=document.createElement("li");
+    // const number=document.createElement("span");
+    // const timestamp=document.createElement("span");
+    // li.setAttribute("class","lapData");
+    // number.setAttribute("class","sNo");
+    // timestamp.setAttribute("class","time");
+
+
+    // timestamp.innerHTML=h +":"+ m + ":" + s + ":" + c;
+    // li.append(number,timestamp);
+    // lapCount.append(li);
+
 
 }
 function stop(){
     temp=false;
     document.getElementById("start").innerHTML="Start";
 
+}
+
+function reset(){
+    temp=false;
+    h=0;
+    m=0;
+    s=0;
+    c=0;
+    document.getElementById("msec").innerHTML="00";
+    document.getElementById("sec").innerHTML="00";
+    document.getElementById("min").innerHTML="00";
+    document.getElementById("hr").innerHTML="00";
+    document.getElementById("lap").innerHTML="Lap";
+    
+
+}
+function audio(){
+    x.currentTime=0;
+    x.play();
 }
 
 function stopwatch(){
@@ -71,4 +119,5 @@ function stopwatch(){
     
         setTimeout("stopwatch()",10)
     }
+
 }
