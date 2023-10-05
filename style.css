@@ -75,26 +75,25 @@ body{
 .button button:hover{
     box-shadow: 1px 1px 20px rgb(61, 60, 60);
 }
-.lapCount{
-    list-style: none;
+#lapCount{
     display: flex;
     justify-content: center;
-    color: white;
-    overflow: auto;
-}
-.sNo{
-    color: white;
-}
-.time{
-    display: inline-block;
-    margin-left: 20vw;
+    list-style: none;
+    flex-direction: column;
+    margin-left: 45%;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    
+
 }
 .lapData{
-    width: 30vw;
-    text-align: center;
-    display: inline-block;
-    padding: .5%;
+    width: 2.5rem;
+    padding-left: 20%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color:rgb(67, 151, 61);
-    border-radius: 2rem;
+    border-radius: 10rem;
 
 }

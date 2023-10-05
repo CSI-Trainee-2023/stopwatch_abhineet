@@ -1,9 +1,15 @@
 var h=0;
 const x = document.getElementById("audio1");
+var Lap=document.getElementById('lap');
+var laps=document.getElementById('laps');
 const img=document.getElementById("screen");
 var m=0;
 var s=0;
 var c=0;
+var hl=0;
+var ml=0;
+var sl=0;
+var cl=0;
 // const lap=document.getElementById("lapCount");
 var button = document.getElementById("start"),
   count = 0;
@@ -37,21 +43,37 @@ function start(){
 
        
 }
+
 function lap(){
-    // const li=document.createElement("li");
-    // const number=document.createElement("span");
-    // const timestamp=document.createElement("span");
-    // li.setAttribute("class","lapData");
-    // number.setAttribute("class","sNo");
-    // timestamp.setAttribute("class","time");
+    var laph=h-hl;
+    var lapmin=m-ml;
+    if(lapmin<0){
+        var lapmin=m-ml+60;
+    }
+    var lapsec=s-sl;
+    if(lapsec<0){
+        var lapsec=s-sl+60;
 
+    }
+    var lapc=c-cl;
+    if(lapc<0){
+        var lapc=c-cl+100;
+    }
+    hl=h;
+    ml=m;
+    sl=s;
+    cl=c;
+    
+    
+    let list1=document.getElementById("lapCount");
+    let item=document.createElement("li");
+    item.textContent=laph +":"+ lapmin+":"+ lapsec+":" + lapc;
 
-    // timestamp.innerHTML=h +":"+ m + ":" + s + ":" + c;
-    // li.append(number,timestamp);
-    // lapCount.append(li);
+    list1.appendChild(item);    
 
 
 }
+
 function stop(){
     temp=false;
     document.getElementById("start").innerHTML="Start";
