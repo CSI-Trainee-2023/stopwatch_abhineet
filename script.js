@@ -1,5 +1,6 @@
 var h=0;
 const x = document.getElementById("audio1");
+const x1 = document.getElementById("audio2");
 // var Lap=document.getElementById('lap');
 const img=document.getElementById("screen");
 var clear=document.getElementById("clear");
@@ -93,7 +94,8 @@ function clear1(){
 
 function stop(){
     temp=false;
-    document.getElementById("start").innerHTML="Start";
+    document.getElementById("start").innerHTML="Resume";
+    
 
 }
 
@@ -108,12 +110,16 @@ function reset(){
     document.getElementById("min").innerHTML="00";
     document.getElementById("hr").innerHTML="00";
     document.getElementById("lap").innerHTML="Lap";
-    
+    audio1()
 
 }
 function audio(){
     x.currentTime=0;
     x.play();
+}
+function audio1(){
+    x1.currentTime=0;
+    x1.play();
 }
 
 function stopwatch(){
@@ -162,6 +168,7 @@ function stopwatch(){
 
 }
 document.addEventListener('keydown',(event)=>{
+    event.preventDefault();
     if(event.ctrlKey){
         if(event.key=== 's') start();
         if(event.key=== 'x') stop();
