@@ -1,8 +1,8 @@
 var h=0;
 const x = document.getElementById("audio1");
 var Lap=document.getElementById('lap');
-var laps=document.getElementById('laps');
 const img=document.getElementById("screen");
+var clear=document.getElementById("clear");
 var m=0;
 var s=0;
 var c=0;
@@ -33,7 +33,11 @@ button1.onclick = function() {
   }
   else{
     reset();
+  } 
+clear.onclick=function(){
+    clear1();
   }
+
 }
 function start(){
     temp=true;
@@ -73,6 +77,10 @@ function lap(){
 
 
 }
+function clear1(){
+    document.getElementById("lapCount").innerHTML="";
+}
+
 
 function stop(){
     temp=false;

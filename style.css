@@ -80,20 +80,23 @@ body{
     justify-content: center;
     list-style: none;
     flex-direction: column;
-    margin-left: 45%;
+    margin-left: 45.5%;
     color: rgb(255, 255, 255);
     width: fit-content;
     
 
 }
 .lapData{
-    width: 2.5rem;
-    padding-left: 20%;
-
+    width: 3.5rem;
+    padding-left: 2%;
     display: flex;
+    margin-left: 46.25%;
+    margin-top: .5%;
     justify-content: center;
     flex-direction: column;
-    background-color:rgb(67, 151, 61);
     border-radius: 10rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: x-large;
+    color: white;
 
 }
