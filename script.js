@@ -1,6 +1,6 @@
 var h=0;
 const x = document.getElementById("audio1");
-var Lap=document.getElementById('lap');
+// var Lap=document.getElementById('lap');
 const img=document.getElementById("screen");
 var clear=document.getElementById("clear");
 var m=0;
@@ -11,6 +11,9 @@ var ml=0;
 var sl=0;
 var cl=0;
 // const lap=document.getElementById("lapCount");
+function supportLocalStorage(){
+    return typeof(storage)!=='undefined';
+}
 var button = document.getElementById("start"),
   count = 0;
 button.onclick = function() {
@@ -49,34 +52,40 @@ function start(){
 }
 
 function lap(){
-    var laph=h-hl;
-    var lapmin=m-ml;
-    if(lapmin<0){
-        var lapmin=m-ml+60;
-    }
-    var lapsec=s-sl;
-    if(lapsec<0){
-        var lapsec=s-sl+60;
+    // var laph=h-hl;
+    // var lapmin=m-ml;
+    // if(lapmin<0){
+    //     var lapmin=m-ml+60;
+    // }
+    // var lapsec=s-sl;
+    // if(lapsec<0){
+    //     var lapsec=s-sl+60;
 
-    }
-    var lapc=c-cl;
-    if(lapc<0){
-        var lapc=c-cl+100;
-    }
-    hl=h;
-    ml=m;
-    sl=s;
-    cl=c;
+    // }
+    // var lapc=c-cl;
+    // if(lapc<0){
+    //     var lapc=c-cl+100;
+    // }
+    // hl=h;
+    // ml=m;
+    // sl=s;
+    // cl=c;
     
     
     let list1=document.getElementById("lapCount");
     let item=document.createElement("li");
-    item.textContent=laph +":"+ lapmin+":"+ lapsec+":" + lapc;
+    item.textContent=h +":"+ m+":"+ s+":" + c;
 
-    list1.appendChild(item);    
-
+    list1.appendChild(item);   
+    
+    // localStorage
+  localStorage.setItem('item',JSON.stringify(item.innerHTML));
 
 }
+
+
+
+
 function clear1(){
     document.getElementById("lapCount").innerHTML="";
 }
@@ -149,5 +158,16 @@ function stopwatch(){
     
         setTimeout("stopwatch()",10)
     }
+    
 
 }
+document.addEventListener('keydown',(event)=>{
+    if(event.ctrlKey){
+        if(event.key=== 's') start();
+        if(event.key=== 'x') stop();
+        if(event.key=== 'r') reset();
+        if(event.key=== 'l') lap();
+
+    }
+});
+
