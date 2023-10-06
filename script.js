@@ -1,7 +1,6 @@
 var h=0;
 const x = document.getElementById("audio1");
 const x1 = document.getElementById("audio2");
-// var Lap=document.getElementById('lap');
 const img=document.getElementById("screen");
 var clear=document.getElementById("clear");
 var m=0;
@@ -11,12 +10,11 @@ var hl=0;
 var ml=0;
 var sl=0;
 var cl=0;
-// const lap=document.getElementById("lapCount");
-function supportLocalStorage(){
-    return typeof(storage)!=='undefined';
-}
+// function supportLocalStorage(){
+//     return typeof(storage)!=='undefined';
+// }
 var button = document.getElementById("start"),
-  count = 0;
+count = 0;
 button.onclick = function() {
   count += 1;
   if(count%2 !=0){
@@ -53,24 +51,6 @@ function start(){
 }
 
 function lap(){
-    // var laph=h-hl;
-    // var lapmin=m-ml;
-    // if(lapmin<0){
-    //     var lapmin=m-ml+60;
-    // }
-    // var lapsec=s-sl;
-    // if(lapsec<0){
-    //     var lapsec=s-sl+60;
-
-    // }
-    // var lapc=c-cl;
-    // if(lapc<0){
-    //     var lapc=c-cl+100;
-    // }
-    // hl=h;
-    // ml=m;
-    // sl=s;
-    // cl=c;
     
     
     let list1=document.getElementById("lapCount");
@@ -80,7 +60,7 @@ function lap(){
     list1.appendChild(item);   
     
     // localStorage
-  localStorage.setItem('item',JSON.stringify(item.innerHTML));
+//   localStorage.setItem('item',JSON.stringify(item.innerHTML));
 
 }
 
@@ -111,6 +91,7 @@ function reset(){
     document.getElementById("hr").innerHTML="00";
     document.getElementById("lap").innerHTML="Lap";
     audio1()
+    document.getElementById("start").innerHTML="Start";
 
 }
 function audio(){
