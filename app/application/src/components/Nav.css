@@ -1,0 +1,94 @@
+/* .Nav{
+    display: flex;
+    
+} */
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap'); */
+
+.navbar-box{
+    color: black;
+    width:89vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin:0 5vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+.navbar-items{
+    display: flex;
+    gap:6vw;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+.head{
+    display: flex;
+    gap: 65vw;
+    margin:0 5vw;
+}
+.headLeft{
+    display: flex;
+    gap: 2vw;
+}
+.headRight{
+    display: flex;
+    gap: 2vw;
+}
+.brandName{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+.container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container #search {
+    cursor: pointer;
+    margin-left: 1.5vw;
+    padding: .8rem 2rem;
+    background-color: #4C8787;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'roboto';
+    letter-spacing: 1.3px;
+    border: none;
+    border-radius: 1rem;
+  }
+  
+  .searchBar {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+    width: 25%;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 5rem;
+  }
+  
+  .textSpace {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .textSpace input {
+    width: 89%;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .textSpace input:focus {
+    outline: none;
+  }
+  
